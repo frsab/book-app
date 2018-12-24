@@ -3,7 +3,21 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: '',
+  headers:
+
+  {
+    //'Access-Control-Allow-Methods': 'GET'
+    //,'Access-Control-Allow-Origin': 'http://localhost:8080'//yourhostname:port
+//    'Content-Type': 'application/json;text/html;charset=UTF-8'
+  //  ,  'Access-Control-Allow-Origin': '*'
+     // , 'Access-Control-Allow-Origin:': '*'
+     // , 'Access-Control-Allow-Methods': 'GET'
+     // , 'Access-Control-Allow-Headers': 'Origin;Content-Type;X-Auth-Token'
+  },
+  headerss: {'Content-Type': 'text/html;charset=UTF-8'}
+
 };
 
 /*

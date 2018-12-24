@@ -8,7 +8,7 @@ import { BookService } from '../shared/services/book.service';
   styleUrls: ['./book.component.scss']
 })
 export class BookComponent implements OnInit {
-  helloMessage: String;
+  helloMessage: any;
   changerVue() {
     console.log('click');
   }
