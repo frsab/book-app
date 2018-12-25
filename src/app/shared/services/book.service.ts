@@ -8,9 +8,17 @@ const headers = new HttpHeaders(environment.headers);
   providedIn: 'root'
 })
 export class BookService {
+
+
   private resourceHello = '/api/all-world';
+  private resourceOne = '/api/one-world';
 
   constructor(private http: HttpClient) {}
+
+
+  public getOne(): any {
+    return this.http.get<any>(this.resourceOne, { headers: headers });
+  }
 
   public getHello() {
     return this.http.get<any>(this.resourceHello, { headers: headers });

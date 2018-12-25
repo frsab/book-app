@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../shared/services/book.service';
+import { BookModel } from '../shared/model/book-model';
 
 
 @Component({
@@ -8,7 +9,10 @@ import { BookService } from '../shared/services/book.service';
   styleUrls: ['./book.component.scss']
 })
 export class BookComponent implements OnInit {
-  helloMessage: any;
+
+  messageBooks: BookModel[];
+  messageBook: BookModel;
+
   changerVue() {
     console.log('click');
   }
@@ -16,9 +20,18 @@ export class BookComponent implements OnInit {
   constructor(private bookService: BookService) {}
 
   ngOnInit() {
-    this.bookService.getHello().subscribe(data => {
-      console.log('data a a a', data);
-      this.helloMessage = data;
-    });
+    this.messageBook= new BookModel();
+     this.bookService.getOne().subscribe(data => {
+       console.log('data bbb', data);
+          this.messageBook =  data;
+     });
+
+    //this.messageBook = this.bookService.getOne();
+
+    // this.bookService.getHello().subscribe(data => {
+    //   console.log('data a a a', data);
+    //      this.messageBooks =  data[0];
+
+    // });
   }
 }
