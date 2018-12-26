@@ -10,7 +10,6 @@ const headers = new HttpHeaders(environment.headers);
 export class BookService {
 
 
-  private resourceHello = '/api/all-world';
   private resourceOne = '/api/one-world';
 
   constructor(private http: HttpClient) {}
@@ -18,9 +17,5 @@ export class BookService {
 
   public getOne(): any {
     return this.http.get<any>(this.resourceOne, { headers: headers });
-  }
-
-  public getHello() {
-    return this.http.get<any>(this.resourceHello, { headers: headers });
   }
 }
