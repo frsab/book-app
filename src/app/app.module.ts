@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginModule } from './login/login.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BookRecursiveBaliseModule } from './book-recursive-balise/book-recursive-balise.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule.forRoot(),
     UserInterfaceModule,
     BookModule,
+    BookRecursiveBaliseModule,
     LoginModule,
     BrowserModule,
     FormsModule

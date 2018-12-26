@@ -1,0 +1,113 @@
+<ng-container *ngFor="let contenu of baliseRoot.contenu">
+  <ng-container *ngIf="contenu.texte"> {{ contenu.texte }} </ng-container>
+  <ng-container *ngIf="contenu.baliseName">
+    <!--<app-balise [baliseRoot]="contenu"></app-balise> -->
+    <ng-container [ngSwitch]="contenu.baliseName">
+      <ng-container *ngSwitchCase="'div'">
+        <div><app-balise [baliseRoot]="contenu"></app-balise></div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'html'">
+        <html>
+          <app-balise [baliseRoot]="contenu"></app-balise>
+        </html>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'head'">
+        <head>
+          <app-balise [baliseRoot]="contenu"></app-balise>
+        </head>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'body'">
+        <body>
+          <app-balise [baliseRoot]="contenu"></app-balise>
+        </body>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'h1'">
+        <h1><app-balise [baliseRoot]="contenu"></app-balise></h1>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'table'">
+        <table>
+          <app-balise [baliseRoot]="contenu"></app-balise>
+        </table>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'tbody'">
+        <tbody>
+          <app-balise [baliseRoot]="contenu"></app-balise>
+        </tbody>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'tr'">
+        <tr>
+          <app-balise [baliseRoot]="contenu"></app-balise>
+        </tr>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'td'">
+        <td><app-balise [baliseRoot]="contenu"></app-balise></td>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'em'">
+        <em> <app-balise [baliseRoot]="contenu"></app-balise> </em>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'strong'">
+        <strong> <app-balise [baliseRoot]="contenu"></app-balise> </strong>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'a'">
+        <a> <app-balise [baliseRoot]="contenu"></app-balise> </a>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'style'">
+        <style>
+          <app-balise [baliseRoot] = 'contenu'></app-balise>
+        </style>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'var'">
+        <var> <app-balise [baliseRoot]="contenu"></app-balise> </var>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'p'">
+        <p><app-balise [baliseRoot]="contenu"></app-balise></p>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'b'">
+        <b> <app-balise [baliseRoot]="contenu"></app-balise> </b>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'colgroup'">
+        <colgroup>
+          <app-balise [baliseRoot]="contenu"></app-balise>
+        </colgroup>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'ul'">
+        <ul>
+          <app-balise [baliseRoot]="contenu"></app-balise>
+        </ul>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'li'">
+        <li><app-balise [baliseRoot]="contenu"></app-balise></li>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'h2'">
+        <h2><app-balise [baliseRoot]="contenu"></app-balise></h2>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'sup'">
+        <sup> <app-balise [baliseRoot]="contenu"></app-balise> </sup>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'h3'">
+        <h3><app-balise [baliseRoot]="contenu"></app-balise></h3>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ng-container>

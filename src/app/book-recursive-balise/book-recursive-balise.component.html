@@ -1,12 +1,12 @@
-<p>book works! 1</p>
-<p><button (click)="changerVue()">Click me!</button></p>
-<p>book works! 3</p>
-<p>book works! 4</p>
+<app-balise [baliseRoot] = 'myRoot'></app-balise>
 
-<div>book works! book 3[{{ messageBook.root.baliseName }}]</div>
-<ng-container *ngTemplateOutlet="maBaliseTemplate; context: ctx">
+
+<!--
+
+  <ng-container *ngTemplateOutlet="maBaliseTemplate; context: ctx">
 </ng-container>
-<!--Definition de template de liste de contenus,
+
+Definition de template de liste de contenus,
   un contenu peut etre une balise, un texte ou un block commente de html
 pour bien fonctionner cette template doit être instanciée avec une liste de type balise
 
@@ -51,5 +51,3 @@ de la maniere suivante
     </ng-container>
   </ng-container>
 </ng-template>
-
-
